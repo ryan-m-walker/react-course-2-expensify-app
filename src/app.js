@@ -15,31 +15,12 @@ import './styles/styles.scss'
 
 const store = configureStore()
 
-store.dispatch(addExpense({
-  description: 'Water Bill',
-  amount: 5000,
-  createdAt: 30000
-}))
-
-store.dispatch(addExpense({
-  description: 'Gas Bill',
-  amount: 6500,
-  createdAt: 20000
-}))
-
-store.dispatch(addExpense({
-  description: 'Rent',
-  amount: 100000,
-  createdAt: 10000
-}))
 
 store.subscribe(() => {
   console.group('STORE')
   console.log(store.getState())
   console.groupEnd()
 })
-
-
 
 
 ReactDOM.render(
