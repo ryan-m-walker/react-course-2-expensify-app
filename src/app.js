@@ -23,9 +23,13 @@ store.subscribe(() => {
 })
 
 
-ReactDOM.render(
+const App = () => (
   <Provider store={store}>
     <AppRouter />
-  </Provider>, 
+  </Provider>
+)
+
+ReactDOM.render(
+  <App />, 
   document.getElementById('app')
 )
