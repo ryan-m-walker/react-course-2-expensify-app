@@ -15,14 +15,6 @@ import './styles/styles.scss'
 
 const store = configureStore()
 
-
-store.subscribe(() => {
-  console.group('STORE')
-  console.log(store.getState())
-  console.groupEnd()
-})
-
-
 const App = () => (
   <Provider store={store}>
     <AppRouter />
